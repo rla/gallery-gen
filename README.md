@@ -31,9 +31,13 @@ Metainfo is stored in `info.json` files (one per directory). Supported metainfo:
 {
     "title": String,
     "description": String, // can contain HTML
-    "cover": String // relative path to cover image
+    "cover": String, // relative path to cover image,
+    "order": String, // currently only "year" is supported,
+    "year": Number   // album year, used for sorting in the parent
 }
 ```
+
+Fields `description`, `cover`, `order` and `year` can be missing.
 
 ## Templates
 
