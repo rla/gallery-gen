@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% include head %>
+    <body>
+        <h1><%= album_title %></h1>
+        <% include breadcrumb %>
+        <p><%- description %></p>
+        <a href="<%= url %>">
+            <img src="<%= url %>" class="image" alt="<%= title %>"></a>
+        <div class="license">
+            (c) 2015 Someone.
+        </div>
+    </body>
+</html>

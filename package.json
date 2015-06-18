@@ -1,0 +1,30 @@
+{
+  "name": "rla-gallery-gen",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Raivo Laanemets",
+    "email": "info@rlaanemets.com"
+  },
+  "keywords": [
+    "static",
+    "gallery",
+    "generator"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rla/gallery-gen"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.8.1",
+    "debug": "^2.2.0",
+    "ejs": "^2.3.1",
+    "http-server": "^0.8.0",
+    "mkdirp": "^0.5.1"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "rla-gallery-gen": "./bin/rla-gallery-gen.js"
+  }
+}

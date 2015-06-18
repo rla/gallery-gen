@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% include head %>
+    <body>
+        <h1><%= info.title %></h1>
+        <% include breadcrumb %>
+        <p><%- info.description %></p>
+        </div>
+        <% if (sorted.albums.length > 0) { %>
+            <h2>Albums</h2>
+            <div class="clearfix">
+                <% sorted.albums.forEach(function(album) { %>
+                    <div class="media-gallery">
+                        <a href="<%= album.url %>" class="media-link">
+                            <img src="<%= album.cover.thumbnail.url %>" class="media-image"
+                                alt="<%= album.info.title %>" width="280" height="210"></a>
+                        <div class="media-meta">
+                            <h2><%= album.info.title %></h2>
+                            <p><%- album.info.description %></p>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        <% } %>
+        <% if (sorted.images.length > 0) { %>
+            <h2>Images</h2>
+            <div class="clearfix">
+                <% sorted.images.forEach(function(image) { %>
+                    <div class="media">
+                        <a href="<%= image.html.url %>" class="media-link">
+                            <img src="<%= image.thumbnail.url %>" class="media-image"
+                                alt="Photo in <%= info.title %>" width="280" height="210"></a>
+                    </div>
+                <% }) %>
+            </div>
+        <% } %>
+    </body>
+</html>

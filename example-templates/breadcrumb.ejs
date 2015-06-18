@@ -1,0 +1,12 @@
+<% if (breadcrumb.length > 1) { %>
+    <div class="breadcrumb">
+        <% breadcrumb.forEach(function(token, i) { %>
+            <%= (i > 0 ? '/' : '') %>
+            <% if (i < breadcrumb.length - 1) { %>
+                <a href="<%= token.url %>"><%= token.title %></a>
+            <% } else { %>
+                <%= token.title %>
+            <% } %>
+        <% }) %>
+    </div>
+<% } %>
